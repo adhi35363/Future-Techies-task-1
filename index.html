@@ -3,73 +3,126 @@
 <head>
     <title>Subham Hospital</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f2f9ff;
+            background: linear-gradient(135deg, #0077b6, #7209b7, #00b4d8);
+            background-size: 300% 300%;
+            animation: gradientBG 10s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
         }
 
         header {
-            background-color: #0077b6;
-            color: white;
             text-align: center;
-            padding: 25px;
+            padding: 40px;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(8px);
+        }
+
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
         }
 
         nav {
-            background-color: #023e8a;
-            padding: 12px;
             text-align: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 15px;
+            margin: 20px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: yellow;
+            color: #ffd60a;
         }
 
         section {
-            padding: 40px;
+            padding: 60px 20px;
             text-align: center;
         }
 
         .card {
-            background-color: white;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
             width: 70%;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px lightgray;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: transform 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
         }
 
         h2 {
-            color: #0077b6;
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 10px;
         }
 
         button {
-            background-color: #0096c7;
-            color: white;
+            margin-top: 15px;
+            padding: 12px 30px;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 25px;
+            background: linear-gradient(to right, #ff6f61, #ff9f1c);
+            color: white;
+            font-size: 16px;
             cursor: pointer;
+            transition: 0.4s;
         }
 
         button:hover {
-            background-color: #023e8a;
+            transform: scale(1.1);
+            background: linear-gradient(to right, #ff9f1c, #ff6f61);
         }
 
         footer {
-            background-color: #0077b6;
-            color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
+            background: rgba(0,0,0,0.4);
+            margin-top: 40px;
         }
+
+        .social {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        @media(max-width:768px){
+            .card{
+                width:90%;
+            }
+        }
+
     </style>
 </head>
 
@@ -77,40 +130,51 @@
 
 <header>
     <h1>🏥 Subham Hospital</h1>
-    <p>We Care for Your Health</p>
+    <p>❤️ We Care for Your Health | 24/7 Emergency 🚑</p>
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Departments</a>
-    <a href="#">Contact</a>
+    <a href="#">🏠 Home</a>
+    <a href="#">ℹ️ About Us</a>
+    <a href="#">🩺 Departments</a>
+    <a href="#">📞 Contact</a>
 </nav>
 
 <section>
+
     <div class="card">
+        <div class="icon">🏥</div>
         <h2>About Subham Hospital</h2>
-        <p>Subham Hospital provides high-quality medical services with modern equipment and experienced doctors. We are committed to patient care and safety.</p>
+        <p>Subham Hospital provides advanced medical care with modern technology and experienced doctors 👨‍⚕️👩‍⚕️. 
+        Patient safety and comfort are our top priorities.</p>
     </div>
 
     <div class="card">
+        <div class="icon">🩺</div>
         <h2>Our Departments</h2>
-        <p>✔ General Medicine<br>
-           ✔ Cardiology<br>
-           ✔ Pediatrics<br>
-           ✔ Orthopedics<br>
-           ✔ Emergency Care</p>
+        <p>
+            ✔ General Medicine 💊 <br>
+            ✔ Cardiology ❤️ <br>
+            ✔ Pediatrics 👶 <br>
+            ✔ Orthopedics 🦴 <br>
+            ✔ Emergency Care 🚑
+        </p>
     </div>
 
     <div class="card">
+        <div class="icon">📅</div>
         <h2>Book an Appointment</h2>
-        <p>Call us at: +91 98765 43210</p>
+        <p>📞 Call us at: +91 98765 43210</p>
         <button>Book Now</button>
     </div>
+
 </section>
 
 <footer>
     <p>© 2026 Subham Hospital | All Rights Reserved</p>
+    <div class="social">
+        🌐 Follow Us: 📘 Facebook | 📷 Instagram | 🐦 Twitter
+    </div>
 </footer>
 
 </body>
